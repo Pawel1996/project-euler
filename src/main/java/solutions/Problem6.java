@@ -5,7 +5,6 @@ public class Problem6 {
     private static final int exponent = 2;
 
     public static long solve() {
-        long answer;
         long sumOfTheSquares = 0;
         long sum = 0;
         long squareOfTheSum;
@@ -16,8 +15,6 @@ public class Problem6 {
         }
         squareOfTheSum = (long) Math.pow(sum, exponent);
 
-        answer = squareOfTheSum - sumOfTheSquares;
-
-        return answer;
+        return squareOfTheSum - sumOfTheSquares;
     }
 }
