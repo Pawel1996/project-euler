@@ -13,6 +13,8 @@ public class Main {
 
 //        System.out.println(Problem4.solve());
 
-        System.out.println(Problem5.solve());
+//        System.out.println(Problem5.solve());
+
+        System.out.println(Problem6.solve());
     }
 }

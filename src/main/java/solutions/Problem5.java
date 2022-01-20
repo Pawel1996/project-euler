@@ -1,7 +1,7 @@
 package solutions;
 
 public class Problem5 {
-    private static final int upperBound = 20;
+    private static final int upperBound = 200;
 
     public static long solve() {
         long answer = -1;
