@@ -5,7 +5,7 @@ public class Problem5 {
 
     public static long solve() {
         long answer = -1;
-        boolean found = false;
+        boolean found;
 
         for (long i = upperBound; i < Long.MAX_VALUE; i++) {
             found = true;

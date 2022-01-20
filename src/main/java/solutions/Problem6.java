@@ -5,10 +5,10 @@ public class Problem6 {
     private static final int exponent = 2;
 
     public static long solve() {
-        long answer = -1;
+        long answer;
         long sumOfTheSquares = 0;
         long sum = 0;
-        long squareOfTheSum = 0;
+        long squareOfTheSum;
 
         for (int i = 1; i <= upperBound; i++) {
             sumOfTheSquares += Math.pow(i, exponent);
