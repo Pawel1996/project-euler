@@ -21,6 +21,8 @@ public class Main {
 
 //        System.out.println(Problem8.solve());
 
-        System.out.println(Problem9.solve());
+//        System.out.println(Problem9.solve());
+
+        System.out.println(Problem10.solve());
     }
 }
