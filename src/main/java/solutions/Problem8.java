@@ -1,16 +1,12 @@
 package solutions;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Problem8 {
     private static final int numberOfAdjacentDigits = 13;
 
     public static long solve() {
-        List<Integer> adjacentDigits = new ArrayList<>();
         long maxProduct = 0;
-        long currentProduct = 1;
-
+        long currentProduct;
 
         String givenNumber = "73167176531330624919225119674426574742355349194934" +
                 "96983520312774506326239578318016984801869478851843" +
@@ -34,20 +30,13 @@ public class Problem8 {
                 "71636269561882670428252483600823257530420752963450";
 
         for (int i = 0; i <= givenNumber.length() - numberOfAdjacentDigits; i++) {
+            currentProduct = 1;
             for (int j = 0; j < numberOfAdjacentDigits; j++) {
-                adjacentDigits.add(Character.getNumericValue(givenNumber.charAt(i+j)));
-            }
-            for (int j = 0; j < numberOfAdjacentDigits; j++) {
-                currentProduct *= adjacentDigits.get(j);
+                currentProduct *= Character.getNumericValue(givenNumber.charAt(i+j));
             }
             if (currentProduct > maxProduct) {
                 maxProduct = currentProduct;
-                System.out.println(adjacentDigits);
-                System.out.println(maxProduct);
-
             }
-            currentProduct = 1;
-            adjacentDigits.clear();
         }
 
         return maxProduct;
