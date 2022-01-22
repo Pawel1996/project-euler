@@ -9,7 +9,6 @@ public class Problem10 {
         for (long i = 0; i < upperBound; i++) {
             if (isPrime(i)) {
                 sum += i;
-//                System.out.println(i);
             }
         }
 
@@ -17,15 +16,16 @@ public class Problem10 {
     }
     
     private static boolean isPrime(long number) {
-//        System.out.println(number + ": ");
         if (number <= 1) {
             return false;
         }
         if (number == 2) {
             return true;
         }
-        for (long i = 2; i <= Math.sqrt(number); i++) {
-//            System.out.println(i);
+        if (number % 2 == 0) {
+            return false;
+        }
+        for (long i = 3; i <= Math.sqrt(number); i += 2) {
             if (number % i == 0) {
                 return false;
             }
